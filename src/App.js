@@ -1,24 +1,36 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
-import TimeSlot from './components/TimeSlot'
+import TimeSlotColumn from './components/TimeSlotColumn'
+import styled from 'styled-components';
 
 
+let PageContainer = styled.div`
+    padding-top: 2vw;
+    background-color: #f5f5f5;
+    height: 100vh;
+`
 
+let ScheduleContainer = styled.div`
+    display: flex;
+    justify-content: center;
+`
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
+      <PageContainer className="App">
         
-        <div class="content is-medium" >
+        <h1 class="subtitle is-2">
           Single-Page Appointment Schdeuling Front-End
-        </div>
+        </h1>
           
-        <TimeSlot/>  
+        <ScheduleContainer>
+          <TimeSlotColumn/>  
+        </ScheduleContainer>
           
         
-      </div>
+      </PageContainer>
     );
   }
 }

@@ -48,7 +48,7 @@ class TimeSlot extends Component {
 
                 <ClickableTile>
                     <div onClick={this.make_modal_visible} class={this.state.tile_state}>
-                        <p class="title"> 9am {this.props.time} </p>
+                        <p class="title"> {this.props.time} </p>
                     </div>
                 </ClickableTile>
                 
