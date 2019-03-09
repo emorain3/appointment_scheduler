@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
-import ModalAppointment from './components/ModalAppointment';
 import TimeSlot from './components/TimeSlot'
 
 
@@ -14,7 +13,6 @@ class App extends Component {
         
         Simplistic Appointment Schdeuling Front-End
           
-          <ModalAppointment/>
           <TimeSlot/>  
           
         

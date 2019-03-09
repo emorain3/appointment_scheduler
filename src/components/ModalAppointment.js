@@ -11,25 +11,16 @@ let Padding = styled.div`
 
 class ModalAppointment extends Component {
 
-    state = {
-        modal_visibility: "modal is-active"
-    }
-
-
-    make_modal_invisible = () => {
-        this.setState({modal_visibility: "modal"})
-    }
-
 
     render() {
         return (
             <div>
-                <div class= {this.state.modal_visibility}>
+                <div class= {this.props.modal_visibility}>
                     <div class="modal-background"></div>
                     <div class="modal-card">
                         <header class="modal-card-head">
                         <p class="modal-card-title">Make Appointment </p>
-                        <button onClick={this.make_modal_invisible} class="delete" aria-label="close"></button>
+                        <button onClick={this.props.make_modal_invisible} class="delete" aria-label="close"></button>
                         </header>
 
                         <section class="modal-card-body">
