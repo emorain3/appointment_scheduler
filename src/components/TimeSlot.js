@@ -12,17 +12,29 @@ let ClickableTile = styled.div`
 class TimeSlot extends Component {
 
     state = {
-        modal_visibility: "modal"
+        modal_visibility: "modal", 
+        tile_state: "tile is-child box"
     }
 
 
-    make_modal_invisible = () => {
-        this.setState({modal_visibility: "modal"})
-    }
-    
-    make_modal_visible = () => {
-        this.setState({modal_visibility: "modal is-active"})
-    }
+    ////  UTILITY FUNCTIONS  ////
+
+        make_modal_invisible = () => {
+            this.setState({modal_visibility: "modal"})
+        }
+        
+        make_modal_visible = () => {
+            this.setState({modal_visibility: "modal is-active"})
+        }
+
+        set_tile_red = () => {
+            this.setState({tile_state: "tile is-child notification is-danger"})
+        }
+
+        on_tile_select = () => {
+            this.make_modal_invisible()
+            this.set_tile_red()
+        }
 
 
     render() {
@@ -30,7 +42,7 @@ class TimeSlot extends Component {
             <div>
 
                 <ClickableTile>
-                    <div onClick={this.make_modal_visible} class="tile is-child box">
+                    <div onClick={this.make_modal_visible} class={this.state.tile_state}>
                         <p class="title"> 9am {this.props.time} </p>
                     </div>
                 </ClickableTile>
@@ -39,6 +51,7 @@ class TimeSlot extends Component {
                     modal_visibility={this.state.modal_visibility}
                     make_modal_invisible={this.make_modal_invisible}
                     make_modal_visible={this.make_modal_visible}
+                    on_tile_select={this.on_tile_select}
                 />
             </div>
         );

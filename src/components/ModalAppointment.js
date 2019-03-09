@@ -42,8 +42,8 @@ class ModalAppointment extends Component {
                         </section>
 
                         <footer class="modal-card-foot">
-                        <button class="button is-success">Save changes</button>
-                        <button class="button">Cancel</button>
+                        <button onClick={this.props.on_tile_select} class="button is-success">Save changes</button>
+                        <button onClick={this.props.make_modal_invisible} class="button">Cancel</button>
                         </footer>
                     </div>
                 </div>

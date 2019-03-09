@@ -11,9 +11,11 @@ class App extends Component {
     return (
       <div className="App">
         
-        Simplistic Appointment Schdeuling Front-End
+        <div class="content is-medium" >
+          Single-Page Appointment Schdeuling Front-End
+        </div>
           
-          <TimeSlot/>  
+        <TimeSlot/>  
           
         
       </div>
