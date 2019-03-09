@@ -5,6 +5,11 @@ import styled from 'styled-components';
 
 let ClickableTile = styled.div`
     cursor: pointer;
+    opacity: .8;
+    &:hover {
+        transform: scale(1.05);
+        opacity: 1;
+    }
 `
 
 

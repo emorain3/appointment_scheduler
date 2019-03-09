@@ -11,8 +11,18 @@ let Padding = styled.div`
 
 class ModalAppointment extends Component {
 
+    state = {
+        name: '',
+        number: '',
+      }
+
+    storeValue = (e) => {
+        this.setState({[e.target.name]: e.target.value})
+    }
+
 
     render() {
+        const {name, number} = this.state;
         return (
             <div>
                 <div class= {this.props.modal_visibility}>
@@ -27,7 +37,7 @@ class ModalAppointment extends Component {
                             <div class="field">
                                 <label class="label"> Name </label>
                                 <div class="control">
-                                    <input class="input" type="text" placeholder="e.g Alex Smith"/>
+                                    <input onChange={this.storeValue} class="input" type="text" name="name" value={name} placeholder="e.g Alex Smith"/>
                                 </div>
                             </div>
 
@@ -36,7 +46,7 @@ class ModalAppointment extends Component {
                             <div class="field">
                                 <label class="label"> Phone Number </label>
                                 <div class="control">
-                                    <input class="input" type="email" placeholder="e.g. alexsmith@gmail.com"/>
+                                    <input onChange={this.storeValue} class="input" type="tel" name="number" value={number} placeholder="e.g. 999-999-999"/>
                                 </div>
                             </div>
                         </section>
