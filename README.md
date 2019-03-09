@@ -1,5 +1,5 @@
-# Simple Single-Page Appointment Schdeuling Front-End
-App for collaborative task and goal creation
+# Appointment Scheduler
+Simple Single-Page Appointment Schdeuling Front-End
 
 
 ### Installing
