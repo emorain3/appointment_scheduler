@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 import TimeSlot from './TimeSlot'
 
+import { connect } from "react-redux";
+import { stat } from 'fs';
 
 
 let ColumnShape = styled.div`
@@ -13,13 +15,10 @@ let ColumnShape = styled.div`
 
 class TimeSlotColumn extends Component {
 
-    state = {
-        time_range_list: ["9am", "10am", "11am", "12pm", "1pm", "2pm", "3pm", "4pm", "5pm"]
-    }
     render() {
         return (
             <ColumnShape>
-                {this.state.time_range_list.map( time => {
+                {this.props.time_range_list.map( time => {
                     return <TimeSlot time = {time} />
                 })}
             </ColumnShape>
@@ -27,4 +26,8 @@ class TimeSlotColumn extends Component {
     }
 }
 
-export default TimeSlotColumn;
+const mapStateToProps = state => {
+    return {time_range_list: state.time_range_list}
+}
+
+export default connect(mapStateToProps)(TimeSlotColumn);

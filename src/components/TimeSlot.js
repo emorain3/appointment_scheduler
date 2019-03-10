@@ -3,6 +3,9 @@ import ModalAppointment from './ModalAppointment';
 import styled from 'styled-components';
 
 
+
+
+///////// STYLING
 let ClickableTile = styled.div`
     cursor: pointer;
     opacity: .8;
@@ -13,6 +16,9 @@ let ClickableTile = styled.div`
 `
 
 
+/////////////////////////////////
+/////////// COMPONENT DEFINITION
+////////////////////////////////
 
 class TimeSlot extends Component {
 

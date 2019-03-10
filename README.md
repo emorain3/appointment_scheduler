@@ -6,8 +6,10 @@ Simple Single-Page Appointment Schdeuling Front-End
  - No installation required! Web app accessible [here @ https://appointment-scheduler-ecclesia.herokuapp.com/](https://appointment-scheduler-ecclesia.herokuapp.com/)
 
 ### Technologies Used
-- [React.js](https://reactjs.org/) - Client/ Front-end management.
 - [Bulma](https://bulma.io/) for styling 
+- [React.js](https://reactjs.org/) - Client/ Front-end management.
+- [React-Redux](https://react-redux.js.org/) - Controller for React data and data flow.
+
 
 
 ### Authors
