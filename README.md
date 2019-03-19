@@ -1,5 +1,5 @@
 # Appointment Scheduler
-Simple Single-Page Appointment Schdeuling Front-End
+Simple Single-Page Appointment Schdeuling Front-End. Used to practice reformatting vanilla React code to rely on Redux. 
 
 
 ### Installing
